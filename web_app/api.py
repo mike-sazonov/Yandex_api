@@ -1,7 +1,7 @@
 from requests import get
 
-def get_response():
-    params = {"public_key": "https://disk.yandex.ru/d/noSJtVxwQ99P4A",
+def get_response(public_key):
+    params = {"public_key": public_key,
               "path": "/"}
     response = get("https://cloud-api.yandex.net/v1/disk/public/resources", params=params)
 
