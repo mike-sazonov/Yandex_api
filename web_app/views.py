@@ -9,6 +9,7 @@ class StartView(FormView):
     form_class = PublicKeyForm
     template_name = 'web_app/start.html'
 
+
 class FilesView(TemplateView):
     template_name = 'web_app/files.html'
 
