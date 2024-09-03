@@ -14,7 +14,7 @@
 
 ### Запуск проекта локально
 1. Клонируйте проект с помощью команды: <br>
-git clone https://github.com/mike-sazonov/task_manager.git
+git clone https://github.com/mike-sazonov/Yandex_api.git
 2. Настройте виртуальную среду
 3. В корне проекта в консоли запустите команду: python manage.py runserver
 4. Перейдите по ссылке http://127.0.0.1:8000
