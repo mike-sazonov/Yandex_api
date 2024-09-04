@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.StartView.as_view()),
-    path('files/', cache_page(120)(views.FilesView.as_view())),
+    path('files/', cache_page(120)(views.FilesView.as_view()), name='files'),
 ]
