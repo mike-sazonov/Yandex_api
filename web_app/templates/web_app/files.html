@@ -5,11 +5,19 @@
 
 {% block content %}
 <div class="text-center p-4"><h3>Список файлов:</h3></div>
+    <form action="/files">
+        <label> Тип файлов: </label>
+        <input type="hidden" name="key" value="{{ key }}">
+        <input type="hidden" name="path" value="{{ path }}">
+        {% bootstrap_form form show_label=False %}
+        <button class="btn btn-primary" type="submit">Отправить</button>
+    </form>
 <h5 class="text-center">{{ path }}</h5>
 <div class="container px-2">
     <div class="row">
         {% for i in files %}
         {% if i.type == 'file' %}
+        {% if i.media_type in type %}
         <div class="col-lg-2 col-sm-4 mb-3">
             <div class="card text-center h-100">
                 <img src="{{ i.preview }}" class="card-img-top" alt="нет изображения" height="150px">
@@ -21,6 +29,7 @@
                 </div>
             </div>
         </div>
+        {% endif %}
         {% else %}
         <div class="col-lg-2 col-sm-4 mb-3">
             <div class="card text-center text-bg-warning h-100">
