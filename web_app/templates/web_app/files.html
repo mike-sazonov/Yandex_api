@@ -5,6 +5,7 @@
 
 {% block content %}
 <div class="text-center p-4"><h3>Список файлов:</h3></div>
+<div class="container px-2">
     <form action="/files">
         <label> Тип файлов: </label>
         <input type="hidden" name="key" value="{{ key }}">
@@ -12,6 +13,7 @@
         {% bootstrap_form form show_label=False %}
         <button class="btn btn-primary" type="submit">Отправить</button>
     </form>
+</div>
 <h5 class="text-center">{{ path }}</h5>
 <div class="container px-2">
     <div class="row">
